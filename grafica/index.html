@@ -5,6 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gráfica Conexão | Maringá - PR</title>
 
+<script>
+const whatsappNumber = "5544984417747";
+const whatsappMessage = "Olá, gostaria de um orçamento!";
+
+function openWhatsApp(){
+  const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+  window.open(url, "_blank");
+}
+</script>
+
 <style>
 *{
     margin:0;
@@ -57,10 +67,14 @@ header{
     color:#000;
     font-weight:600;
     transition:.3s;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    cursor:pointer;
 }
 
 .btn-whatsapp:hover{
-    transform:scale(1.05);
+    opacity:.9;
 }
 
 /* HERO */
@@ -80,6 +94,7 @@ header{
     filter:blur(140px);
     top:-120px;
     right:-100px;
+    pointer-events: none;
 }
 
 .hero-content{
@@ -277,16 +292,18 @@ header{
 <div class="container header-content">
 <div class="logo">Gráfica <span>Conexão</span></div>
 
-<a href="https://wa.me/5544999999999?text=Olá,%20gostaria%20de%20um%20orçamento!"
-class="btn-whatsapp" target="_blank">
+<button class="btn-whatsapp" onclick="openWhatsApp()">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.86c0 2.1.55 4.14 1.6 5.95L0 24l6.39-1.67a11.8 11.8 0 0 0 5.66 1.45h.01c6.55 0 11.85-5.3 11.85-11.86 0-3.17-1.23-6.15-3.39-8.44zM12.06 21.4h-.01a9.45 9.45 0 0 1-4.81-1.32l-.35-.2-3.79.99 1.01-3.69-.23-.38a9.45 9.45 0 1 1 8.18 4.6zm5.2-7.05c-.28-.14-1.65-.81-1.9-.9-.25-.09-.43-.14-.61.14s-.7.9-.86 1.09c-.16.18-.32.2-.6.07-.28-.14-1.17-.43-2.23-1.36-.83-.74-1.39-1.65-1.55-1.93-.16-.28-.02-.43.12-.57.12-.12.28-.32.42-.48.14-.16.18-.28.28-.46.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.44-.46-.61-.47h-.52c-.18 0-.47.07-.71.34-.25.28-.94.92-.94 2.24 0 1.32.97 2.59 1.11 2.77.14.18 1.91 2.91 4.63 4.08.65.28 1.15.44 1.55.56.65.2 1.25.17 1.72.1.52-.08 1.65-.67 1.89-1.31.23-.64.23-1.18.16-1.31-.07-.14-.25-.23-.52-.37z"/>
+</svg>
 WhatsApp
-</a>
+</button>
+
 </div>
 </header>
 
 <section class="hero">
 <div class="container hero-content">
-
 <span class="tag">Maringá - PR</span>
 
 <h1>
@@ -300,7 +317,6 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </p>
 
 <div class="hero-benefits">
-
 <div class="benefit-card">
 <strong>Entrega rápida</strong>
 <span>Produção ágil com compromisso no prazo.</span>
@@ -315,20 +331,19 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 <strong>Atendimento local</strong>
 <span>Maringá e região com suporte direto.</span>
 </div>
-
 </div>
 </div>
 </section>
 
 <section class="products">
 <div class="container">
-
 <h2 class="section-title">Nossos Produtos</h2>
-
 <div class="grid">
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="../assets/grafica/cartao.jpg" alt="Cartão de visita" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Cartão de visita</h3>
 <p>Modelos clássicos e premium para fortalecer sua marca.</p>
@@ -336,7 +351,9 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </div>
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="assets/grafica/panfletos.jpg" alt="Panfletos" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Panfletos</h3>
 <p>Divulgação rápida para promoções e campanhas.</p>
@@ -344,7 +361,9 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </div>
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="assets/grafica/pasta.jpg" alt="Pasta" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Pasta</h3>
 <p>Apresentação profissional para propostas e documentos.</p>
@@ -352,7 +371,9 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </div>
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="assets/grafica/receituario.jpg" alt="Receituário" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Receituário</h3>
 <p>Impressão organizada para clínicas e profissionais.</p>
@@ -360,7 +381,9 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </div>
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="assets/grafica/envelope.jpg" alt="Envelope" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Envelope</h3>
 <p>Personalizados para reforçar sua identidade visual.</p>
@@ -368,13 +391,12 @@ Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
 </div>
 
 <div class="card">
-<div class="card-image">FOTO</div>
+<div class="card-image">
+<img src="assets/grafica/sacola.jpg" alt="Sacola" style="width:100%;height:100%;object-fit:cover;">
+</div>
 <div class="card-content">
 <h3>Sacola</h3>
 <p>Ideal para lojas e estabelecimentos comerciais.</p>
-<div class="important">
-IMPORTANTE: Produzimos em diversos tamanhos e materiais.
-</div>
 </div>
 </div>
 
@@ -385,31 +407,25 @@ IMPORTANTE: Produzimos em diversos tamanhos e materiais.
 <section class="others">
 <div class="container">
 <h2>Outros serviços gráficos</h2>
-<p>
-Também realizamos diversos outros materiais sob demanda.
-Solicite orçamento personalizado e receba atendimento rápido.
-</p>
+<p>Também realizamos diversos outros materiais sob demanda. Solicite orçamento personalizado e receba atendimento rápido.</p>
 </div>
 </section>
 
 <section class="contact">
 <div class="container contact-grid">
-
-<div class="contact-card">
-<h4>Email</h4>
-<p>contato@conexaovisual.site</p>
-</div>
+<div class="contact-card"><h4>Email</h4><p>contato@conexaovisual.site</p></div>
 
 <div class="contact-card">
 <h4>WhatsApp</h4>
-<p>Chamar agora</p>
+<button class="btn-whatsapp" onclick="openWhatsApp()">
+<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="black" viewBox="0 0 24 24">
+<path d="M20.52 3.48A11.86 11.86 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.86c0 2.1.55 4.14 1.6 5.95L0 24l6.39-1.67a11.8 11.8 0 0 0 5.66 1.45h.01c6.55 0 11.85-5.3 11.85-11.86 0-3.17-1.23-6.15-3.39-8.44z"/>
+</svg>
+Chamar agora
+</button>
 </div>
 
-<div class="contact-card">
-<h4>Cidade</h4>
-<p>Maringá - PR</p>
-</div>
-
+<div class="contact-card"><h4>Cidade</h4><p>Maringá - PR</p></div>
 </div>
 </section>
 
