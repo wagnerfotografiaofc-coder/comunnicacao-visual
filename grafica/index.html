@@ -6,27 +6,26 @@
 <title>Gráfica Conexão | Maringá - PR</title>
 
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg,#0b0b0f,#1a0000);
+    font-family: 'Segoe UI', sans-serif;
+    background:#0b0b0f;
     color:#fff;
 }
 
 .container{
     width:90%;
-    max-width:1100px;
+    max-width:1200px;
     margin:auto;
 }
 
+/* HEADER */
 header{
+    background:#111;
+    border-bottom:1px solid rgba(255,0,0,.3);
     padding:20px 0;
-    border-bottom:1px solid rgba(255,255,255,0.1);
 }
 
 .header-content{
@@ -35,109 +34,154 @@ header{
     align-items:center;
 }
 
-h1{
-    font-size:24px;
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#ff1e1e;
 }
 
 .btn-whatsapp{
     background:#25D366;
-    color:#000;
-    padding:10px 16px;
+    padding:10px 20px;
     border-radius:30px;
+    color:#000;
     text-decoration:none;
     font-weight:bold;
+    transition:.3s;
+}
+.btn-whatsapp:hover{
+    transform:scale(1.05);
 }
 
-.intro{
-    padding:40px 0;
+/* HERO */
+.hero{
+    padding:60px 0;
+    background:linear-gradient(90deg,#0b0b0f,#1a0000);
 }
 
-.intro h2{
-    font-size:32px;
-    margin-bottom:15px;
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
 }
 
-.intro p{
-    margin-bottom:15px;
+.hero p{
+    max-width:700px;
     color:#ccc;
+    margin-bottom:20px;
 }
 
-.benefits li{
-    margin-bottom:8px;
-}
-
-.products{
-    padding:30px 0;
-}
-
-.product{
+.benefits{
     display:flex;
     gap:20px;
-    margin-bottom:25px;
-    background:rgba(255,255,255,0.05);
-    padding:15px;
-    border-radius:12px;
+    flex-wrap:wrap;
 }
 
-.image{
-    width:150px;
-    height:120px;
-    background:rgba(255,255,255,0.1);
+.benefits div{
+    background:#1a1a1a;
+    padding:10px 15px;
+    border-radius:20px;
+    border:1px solid rgba(255,0,0,.2);
+}
+
+/* PRODUCTS */
+.products{
+    padding:60px 0;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#111;
+    border-radius:20px;
+    overflow:hidden;
+    border:1px solid rgba(255,0,0,.2);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    border-color:#ff1e1e;
+}
+
+.card-image{
+    height:180px;
+    background:#222;
     display:flex;
     align-items:center;
     justify-content:center;
-    border-radius:10px;
+    font-weight:bold;
+    color:#777;
 }
 
-.text h3{
-    margin-bottom:8px;
+.card-content{
+    padding:20px;
+}
+
+.card-content h3{
+    margin-bottom:10px;
+    color:#ff1e1e;
 }
 
 .important{
     margin-top:10px;
-    background:rgba(255,0,0,0.2);
-    padding:8px;
-    border-radius:8px;
+    padding:10px;
+    background:rgba(255,0,0,.15);
+    border-radius:10px;
+    font-size:14px;
 }
 
+/* OTHER */
 .others{
-    padding:40px 0;
-    border-top:1px solid rgba(255,255,255,0.1);
+    padding:50px 0;
+    text-align:center;
+    border-top:1px solid rgba(255,255,255,.1);
 }
 
+.others h2{
+    margin-bottom:15px;
+}
+
+/* CONTACT */
 .contact{
-    padding:40px 0;
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
+    padding:60px 0;
+    background:#111;
 }
 
-.circle{
-    flex:1;
-    background:rgba(255,255,255,0.05);
-    padding:25px;
+.contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+}
+
+.contact-card{
+    background:#1a1a1a;
+    padding:30px;
     border-radius:50px;
     text-align:center;
+    border:1px solid rgba(255,0,0,.2);
+}
+
+.contact-card h4{
+    margin-bottom:10px;
+    color:#ff1e1e;
 }
 
 @media(max-width:768px){
-    .product{
-        flex-direction:column;
-    }
-
-    .contact{
-        flex-direction:column;
-    }
+    .hero h1{font-size:32px;}
 }
-</style>
 
+</style>
 </head>
 
 <body>
 
 <header>
 <div class="container header-content">
-<h1>Gráfica Conexão</h1>
+<div class="logo">Gráfica Conexão - Maringá PR</div>
 
 <a href="https://wa.me/5544999999999?text=Olá,%20gostaria%20de%20um%20orçamento!"
 class="btn-whatsapp" target="_blank">
@@ -146,62 +190,66 @@ WhatsApp
 </div>
 </header>
 
-<section class="intro container">
-<h2>Impressos com qualidade e entrega rápida</h2>
-<p>Produção gráfica para empresas e profissionais. Atendimento ágil e orçamento direto no WhatsApp.</p>
+<section class="hero">
+<div class="container">
+<h1>Impressos com qualidade e entrega rápida</h1>
+<p>Produção gráfica profissional para empresas e empreendedores. Acabamento impecável e atendimento direto pelo WhatsApp.</p>
 
-<ul class="benefits">
-<li>Entrega rápida</li>
-<li>Qualidade profissional</li>
-<li>Atendimento em Maringá e região</li>
-</ul>
+<div class="benefits">
+<div>Entrega rápida</div>
+<div>Qualidade profissional</div>
+<div>Atendimento em Maringá e região</div>
+</div>
+</div>
 </section>
 
-<section class="products container">
+<section class="products">
+<div class="container">
+<div class="grid">
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Cartão de visita</h3>
 <p>Modelos clássicos e premium para fortalecer sua marca.</p>
 </div>
 </div>
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Panfletos</h3>
 <p>Divulgação rápida para promoções e campanhas.</p>
 </div>
 </div>
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Pasta</h3>
 <p>Apresentação profissional para documentos.</p>
 </div>
 </div>
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Receituário</h3>
-<p>Impressão organizada para clínicas e profissionais.</p>
+<p>Impressão organizada para clínicas.</p>
 </div>
 </div>
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Envelope</h3>
 <p>Personalizados para reforçar sua marca.</p>
 </div>
 </div>
 
-<div class="product">
-<div class="image">FOTO</div>
-<div class="text">
+<div class="card">
+<div class="card-image">FOTO</div>
+<div class="card-content">
 <h3>Sacola</h3>
 <p>Ideal para lojas e presentes.</p>
 <div class="important">
@@ -210,27 +258,35 @@ IMPORTANTE: Produzimos em diversos tamanhos e materiais.
 </div>
 </div>
 
+</div>
+</div>
 </section>
 
-<section class="others container">
+<section class="others">
+<div class="container">
 <h2>Outros serviços gráficos</h2>
 <p>Também realizamos diversos outros materiais sob demanda. Solicite orçamento personalizado.</p>
+</div>
 </section>
 
-<section class="container contact">
-<div class="circle">
+<section class="contact">
+<div class="container contact-grid">
+
+<div class="contact-card">
 <h4>Email</h4>
 <p>contato@conexaovisual.site</p>
 </div>
 
-<div class="circle">
+<div class="contact-card">
 <h4>WhatsApp</h4>
 <p>Chamar agora</p>
 </div>
 
-<div class="circle">
+<div class="contact-card">
 <h4>Cidade</h4>
 <p>Maringá - PR</p>
+</div>
+
 </div>
 </section>
 
