@@ -1,125 +1,237 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gráfica Conexão | Maringá - PR</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gráfica Conexão | Maringá - PR</title>
 
-  <link rel="stylesheet" href="../styles.css">
-  <link rel="stylesheet" href="grafica.css">
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg,#0b0b0f,#1a0000);
+    color:#fff;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+header{
+    padding:20px 0;
+    border-bottom:1px solid rgba(255,255,255,0.1);
+}
+
+.header-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+h1{
+    font-size:24px;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+    color:#000;
+    padding:10px 16px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.intro{
+    padding:40px 0;
+}
+
+.intro h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.intro p{
+    margin-bottom:15px;
+    color:#ccc;
+}
+
+.benefits li{
+    margin-bottom:8px;
+}
+
+.products{
+    padding:30px 0;
+}
+
+.product{
+    display:flex;
+    gap:20px;
+    margin-bottom:25px;
+    background:rgba(255,255,255,0.05);
+    padding:15px;
+    border-radius:12px;
+}
+
+.image{
+    width:150px;
+    height:120px;
+    background:rgba(255,255,255,0.1);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+}
+
+.text h3{
+    margin-bottom:8px;
+}
+
+.important{
+    margin-top:10px;
+    background:rgba(255,0,0,0.2);
+    padding:8px;
+    border-radius:8px;
+}
+
+.others{
+    padding:40px 0;
+    border-top:1px solid rgba(255,255,255,0.1);
+}
+
+.contact{
+    padding:40px 0;
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.circle{
+    flex:1;
+    background:rgba(255,255,255,0.05);
+    padding:25px;
+    border-radius:50px;
+    text-align:center;
+}
+
+@media(max-width:768px){
+    .product{
+        flex-direction:column;
+    }
+
+    .contact{
+        flex-direction:column;
+    }
+}
+</style>
+
 </head>
 
 <body>
 
-<header class="header">
-  <div class="container header-content">
-    <h1>Gráfica Conexão</h1>
+<header>
+<div class="container header-content">
+<h1>Gráfica Conexão</h1>
 
-    <a href="https://wa.me/5544999999999?text=Olá,%20gostaria%20de%20um%20orçamento!"
-       target="_blank"
-       class="btn-whatsapp">
-       WhatsApp
-    </a>
-  </div>
+<a href="https://wa.me/5544999999999?text=Olá,%20gostaria%20de%20um%20orçamento!"
+class="btn-whatsapp" target="_blank">
+WhatsApp
+</a>
+</div>
 </header>
 
 <section class="intro container">
-  <h2>Impressos com qualidade e entrega rápida</h2>
-  <p>
-    Produção gráfica para empresas e profissionais.
-    Acabamento caprichado, atendimento ágil e orçamento direto no WhatsApp.
-  </p>
+<h2>Impressos com qualidade e entrega rápida</h2>
+<p>Produção gráfica para empresas e profissionais. Atendimento ágil e orçamento direto no WhatsApp.</p>
 
-  <ul class="benefits">
-    <li>Entrega rápida</li>
-    <li>Qualidade profissional</li>
-    <li>Atendimento em Maringá e região</li>
-  </ul>
+<ul class="benefits">
+<li>Entrega rápida</li>
+<li>Qualidade profissional</li>
+<li>Atendimento em Maringá e região</li>
+</ul>
 </section>
 
 <section class="products container">
 
-  <!-- ITEM -->
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Cartão de visita</h3>
-      <p>Modelos clássicos e premium. Ideal para fortalecer sua marca.</p>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Cartão de visita</h3>
+<p>Modelos clássicos e premium para fortalecer sua marca.</p>
+</div>
+</div>
 
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Panfletos</h3>
-      <p>Divulgação rápida para promoções e campanhas.</p>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Panfletos</h3>
+<p>Divulgação rápida para promoções e campanhas.</p>
+</div>
+</div>
 
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Pasta</h3>
-      <p>Apresentação profissional para documentos e propostas.</p>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Pasta</h3>
+<p>Apresentação profissional para documentos.</p>
+</div>
+</div>
 
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Receituário</h3>
-      <p>Impressão limpa e organizada para clínicas e profissionais.</p>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Receituário</h3>
+<p>Impressão organizada para clínicas e profissionais.</p>
+</div>
+</div>
 
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Envelope</h3>
-      <p>Personalizados para reforçar sua marca.</p>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Envelope</h3>
+<p>Personalizados para reforçar sua marca.</p>
+</div>
+</div>
 
-  <div class="product">
-    <div class="image">FOTO</div>
-    <div class="text">
-      <h3>Sacola</h3>
-      <p>Ideal para lojas e presentes.</p>
-      <div class="important">
-        IMPORTANTE: Produzimos em diversos tamanhos e materiais.
-      </div>
-    </div>
-  </div>
+<div class="product">
+<div class="image">FOTO</div>
+<div class="text">
+<h3>Sacola</h3>
+<p>Ideal para lojas e presentes.</p>
+<div class="important">
+IMPORTANTE: Produzimos em diversos tamanhos e materiais.
+</div>
+</div>
+</div>
 
 </section>
 
 <section class="others container">
-  <h2>Outros serviços gráficos</h2>
-  <p>
-    Também fazemos diversos outros materiais sob demanda.
-    Entre em contato para um orçamento personalizado.
-  </p>
+<h2>Outros serviços gráficos</h2>
+<p>Também realizamos diversos outros materiais sob demanda. Solicite orçamento personalizado.</p>
 </section>
 
-<section class="contact">
-  <div class="container contact-boxes">
+<section class="container contact">
+<div class="circle">
+<h4>Email</h4>
+<p>contato@conexaovisual.site</p>
+</div>
 
-    <div class="circle">
-      <h4>E-mail</h4>
-      <p>contato@conexaovisual.site</p>
-    </div>
+<div class="circle">
+<h4>WhatsApp</h4>
+<p>Chamar agora</p>
+</div>
 
-    <div class="circle">
-      <h4>WhatsApp</h4>
-      <p>Chamar agora</p>
-    </div>
-
-    <div class="circle">
-      <h4>Cidade</h4>
-      <p>Maringá - PR</p>
-    </div>
-
-  </div>
+<div class="circle">
+<h4>Cidade</h4>
+<p>Maringá - PR</p>
+</div>
 </section>
 
 </body>
