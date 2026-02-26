@@ -6,13 +6,17 @@
 <title>Gráfica Conexão | Maringá - PR</title>
 
 <style>
-
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
 body{
-    font-family: 'Segoe UI', sans-serif;
-    background:#0b0b0f;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background:#0d0d12;
     color:#fff;
+    line-height:1.6;
 }
 
 .container{
@@ -22,10 +26,11 @@ body{
 }
 
 /* HEADER */
+
 header{
     background:#111;
-    border-bottom:1px solid rgba(255,0,0,.3);
     padding:20px 0;
+    border-bottom:1px solid rgba(255,0,0,.2);
 }
 
 .header-content{
@@ -36,144 +41,233 @@ header{
 
 .logo{
     font-size:22px;
-    font-weight:bold;
+    font-weight:600;
+    letter-spacing:1px;
+}
+
+.logo span{
     color:#ff1e1e;
 }
 
 .btn-whatsapp{
     background:#25D366;
-    padding:10px 20px;
-    border-radius:30px;
-    color:#000;
+    padding:10px 22px;
+    border-radius:40px;
     text-decoration:none;
-    font-weight:bold;
+    color:#000;
+    font-weight:600;
     transition:.3s;
 }
+
 .btn-whatsapp:hover{
     transform:scale(1.05);
 }
 
 /* HERO */
+
 .hero{
-    padding:60px 0;
-    background:linear-gradient(90deg,#0b0b0f,#1a0000);
+    padding:110px 0 90px;
+    background:linear-gradient(135deg,#0d0d12 40%, #2a0000 100%);
+    position:relative;
+}
+
+.hero::after{
+    content:"";
+    position:absolute;
+    width:500px;
+    height:500px;
+    background:rgba(255,0,0,.2);
+    filter:blur(140px);
+    top:-120px;
+    right:-100px;
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:750px;
+}
+
+.tag{
+    display:inline-block;
+    background:#ff1e1e;
+    padding:6px 16px;
+    border-radius:25px;
+    font-size:12px;
+    font-weight:600;
+    margin-bottom:25px;
 }
 
 .hero h1{
-    font-size:42px;
-    margin-bottom:20px;
+    font-size:52px;
+    line-height:1.15;
+    margin-bottom:25px;
+    font-weight:700;
+}
+
+.hero h1 span{
+    color:#ff1e1e;
 }
 
 .hero p{
-    max-width:700px;
+    font-size:18px;
     color:#ccc;
-    margin-bottom:20px;
+    margin-bottom:40px;
 }
 
-.benefits{
-    display:flex;
+.hero-benefits{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
     gap:20px;
-    flex-wrap:wrap;
 }
 
-.benefits div{
-    background:#1a1a1a;
-    padding:10px 15px;
+.benefit-card{
+    background:rgba(255,255,255,.04);
+    padding:22px;
     border-radius:20px;
-    border:1px solid rgba(255,0,0,.2);
+    border:1px solid rgba(255,0,0,.15);
+    transition:.3s;
+}
+
+.benefit-card:hover{
+    transform:translateY(-6px);
+    border-color:#ff1e1e;
+}
+
+.benefit-card strong{
+    display:block;
+    margin-bottom:8px;
+    font-size:15px;
+}
+
+.benefit-card span{
+    font-size:14px;
+    color:#aaa;
 }
 
 /* PRODUCTS */
+
 .products{
-    padding:60px 0;
+    padding:100px 0;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:60px;
+    text-align:center;
 }
 
 .grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:40px;
 }
 
 .card{
     background:#111;
-    border-radius:20px;
+    border-radius:25px;
     overflow:hidden;
-    border:1px solid rgba(255,0,0,.2);
+    border:1px solid rgba(255,0,0,.15);
     transition:.3s;
 }
 
 .card:hover{
-    transform:translateY(-5px);
+    transform:translateY(-8px);
     border-color:#ff1e1e;
 }
 
 .card-image{
-    height:180px;
-    background:#222;
+    height:220px;
+    background:#1a1a1a;
     display:flex;
     align-items:center;
     justify-content:center;
-    font-weight:bold;
     color:#777;
+    font-weight:600;
 }
 
 .card-content{
-    padding:20px;
+    padding:25px;
 }
 
 .card-content h3{
-    margin-bottom:10px;
+    margin-bottom:12px;
     color:#ff1e1e;
+    font-size:20px;
+}
+
+.card-content p{
+    color:#bbb;
+    font-size:15px;
 }
 
 .important{
-    margin-top:10px;
+    margin-top:15px;
     padding:10px;
     background:rgba(255,0,0,.15);
-    border-radius:10px;
-    font-size:14px;
+    border-radius:12px;
+    font-size:13px;
 }
 
-/* OTHER */
+/* OTHER SERVICES */
+
 .others{
-    padding:50px 0;
+    padding:80px 0;
+    background:#111;
     text-align:center;
-    border-top:1px solid rgba(255,255,255,.1);
 }
 
 .others h2{
-    margin-bottom:15px;
+    font-size:28px;
+    margin-bottom:20px;
+}
+
+.others p{
+    max-width:700px;
+    margin:auto;
+    color:#ccc;
 }
 
 /* CONTACT */
+
 .contact{
-    padding:60px 0;
-    background:#111;
+    padding:100px 0;
 }
 
 .contact-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:40px;
 }
 
 .contact-card{
-    background:#1a1a1a;
-    padding:30px;
-    border-radius:50px;
+    background:#111;
+    padding:40px;
+    border-radius:60px;
     text-align:center;
-    border:1px solid rgba(255,0,0,.2);
+    border:1px solid rgba(255,0,0,.15);
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-6px);
+    border-color:#ff1e1e;
 }
 
 .contact-card h4{
-    margin-bottom:10px;
+    margin-bottom:15px;
     color:#ff1e1e;
+    font-size:18px;
+}
+
+.contact-card p{
+    color:#ccc;
+    font-size:15px;
 }
 
 @media(max-width:768px){
-    .hero h1{font-size:32px;}
+    .hero h1{font-size:38px;}
 }
-
 </style>
 </head>
 
@@ -181,7 +275,7 @@ header{
 
 <header>
 <div class="container header-content">
-<div class="logo">Gráfica Conexão - Maringá PR</div>
+<div class="logo">Gráfica <span>Conexão</span></div>
 
 <a href="https://wa.me/5544999999999?text=Olá,%20gostaria%20de%20um%20orçamento!"
 class="btn-whatsapp" target="_blank">
@@ -191,20 +285,46 @@ WhatsApp
 </header>
 
 <section class="hero">
-<div class="container">
-<h1>Impressos com qualidade e entrega rápida</h1>
-<p>Produção gráfica profissional para empresas e empreendedores. Acabamento impecável e atendimento direto pelo WhatsApp.</p>
+<div class="container hero-content">
 
-<div class="benefits">
-<div>Entrega rápida</div>
-<div>Qualidade profissional</div>
-<div>Atendimento em Maringá e região</div>
+<span class="tag">Maringá - PR</span>
+
+<h1>
+Impressos com <span>qualidade premium</span><br>
+e entrega rápida
+</h1>
+
+<p>
+Produção gráfica profissional para empresas, clínicas e empreendedores.
+Acabamento impecável, agilidade na produção e orçamento direto no WhatsApp.
+</p>
+
+<div class="hero-benefits">
+
+<div class="benefit-card">
+<strong>Entrega rápida</strong>
+<span>Produção ágil com compromisso no prazo.</span>
+</div>
+
+<div class="benefit-card">
+<strong>Qualidade profissional</strong>
+<span>Impressão nítida e acabamento refinado.</span>
+</div>
+
+<div class="benefit-card">
+<strong>Atendimento local</strong>
+<span>Maringá e região com suporte direto.</span>
+</div>
+
 </div>
 </div>
 </section>
 
 <section class="products">
 <div class="container">
+
+<h2 class="section-title">Nossos Produtos</h2>
+
 <div class="grid">
 
 <div class="card">
@@ -227,7 +347,7 @@ WhatsApp
 <div class="card-image">FOTO</div>
 <div class="card-content">
 <h3>Pasta</h3>
-<p>Apresentação profissional para documentos.</p>
+<p>Apresentação profissional para propostas e documentos.</p>
 </div>
 </div>
 
@@ -235,7 +355,7 @@ WhatsApp
 <div class="card-image">FOTO</div>
 <div class="card-content">
 <h3>Receituário</h3>
-<p>Impressão organizada para clínicas.</p>
+<p>Impressão organizada para clínicas e profissionais.</p>
 </div>
 </div>
 
@@ -243,7 +363,7 @@ WhatsApp
 <div class="card-image">FOTO</div>
 <div class="card-content">
 <h3>Envelope</h3>
-<p>Personalizados para reforçar sua marca.</p>
+<p>Personalizados para reforçar sua identidade visual.</p>
 </div>
 </div>
 
@@ -251,7 +371,7 @@ WhatsApp
 <div class="card-image">FOTO</div>
 <div class="card-content">
 <h3>Sacola</h3>
-<p>Ideal para lojas e presentes.</p>
+<p>Ideal para lojas e estabelecimentos comerciais.</p>
 <div class="important">
 IMPORTANTE: Produzimos em diversos tamanhos e materiais.
 </div>
@@ -265,7 +385,10 @@ IMPORTANTE: Produzimos em diversos tamanhos e materiais.
 <section class="others">
 <div class="container">
 <h2>Outros serviços gráficos</h2>
-<p>Também realizamos diversos outros materiais sob demanda. Solicite orçamento personalizado.</p>
+<p>
+Também realizamos diversos outros materiais sob demanda.
+Solicite orçamento personalizado e receba atendimento rápido.
+</p>
 </div>
 </section>
 
